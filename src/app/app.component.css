@@ -1,5 +1,13 @@
 
-.flex-grid {
+.flex {
+  display: flex;
+}
+
+.cart {
+  width: 400px;
+}
+
+.items-grid {
   display: flex;
   flex-wrap: wrap;
 }
@@ -9,7 +17,6 @@
 }
 
 .border-box {
-  /*border: 1px solid #303030;*/
   max-width: 215px;
   text-align: center;
 }

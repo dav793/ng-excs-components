@@ -3,22 +3,26 @@
   <h1>Welcome to my store</h1>
 </nav>
 
-<div class="flex-grid">
+<div class="flex">
 
-  <div class="item" *ngFor="let item of items">
+  <div class="cart">
 
-    <div class="border-box">
-      <h4>{{item.name}}</h4>
-      <img src="https://via.placeholder.com/200x150">
-      <div>
-        <p>
-          <span *ngFor="let star of convertNumberToCollection(item.stars)">&#11089;</span>
-        </p>
-      </div>
+    <app-cart [itemsInCart]="myCart"></app-cart>
+
+  </div>
+
+  <div class="items-grid">
+
+    <div class="item" *ngFor="let item of items; let i=index">
+
+      #{{i}}
+      <app-item
+        [item]="item"
+        (addedToCart)="addToCart($event)"
+      ></app-item>
+
     </div>
 
   </div>
 
 </div>
-
-

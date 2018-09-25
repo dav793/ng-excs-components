@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 
+import { MyItem } from './my-item';
+
 /**
  * - Como puedo mostrar todos los objetos del arreglo items iterativamente?
  * - Como puedo numerar los items en el primer *ngFor automaticamente?
- * -
+ * - Como puedo crear un componente para mostrar un item, que sea reutilizable, testeable y fácil de modificar a lo largo de toda la aplicación?
+ * - Como puedo agregar items al carrito?
+ * - Como puedo crear un componente para mostrar el carrito?
  */
-
-class MyItem {
-  name: string;
-  stars: number;
-}
 
 @Component({
   selector: 'app-root',
@@ -60,9 +59,10 @@ export class AppComponent {
       stars: 5
     }
   ];
+  myCart: MyItem[] = [];
 
-  convertNumberToCollection(num: number) {
-    return Array(num).fill(0);
+  addToCart(item: MyItem) {
+    this.myCart.push(item);
   }
 
 }
