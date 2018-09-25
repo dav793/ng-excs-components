@@ -7,22 +7,28 @@
 
   <div class="cart">
 
-    <app-cart [itemsInCart]="myCart"></app-cart>
+    <h2>My Cart</h2>
+    <ul>
+      <li *ngFor="let item of myCart">{{item.name}}</li>
+    </ul>
 
   </div>
 
   <div class="items-grid">
+    <div class="item">
 
-    <div class="item" *ngFor="let item of items; let i=index">
-
-      #{{i}}
-      <app-item
-        [item]="item"
-        (addedToCart)="addToCart($event)"
-      ></app-item>
+      <div class="border-box">
+        <h4>Item 0</h4>
+        <img src="https://via.placeholder.com/200x150">
+        <div>
+          <p>
+            <span>&#11089;</span>
+          </p>
+        </div>
+        <button>Add to cart</button>
+      </div>
 
     </div>
-
   </div>
 
 </div>

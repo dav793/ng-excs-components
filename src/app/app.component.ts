@@ -4,7 +4,7 @@ import { MyItem } from './my-item';
 
 /**
  * - Como puedo mostrar todos los objetos del arreglo items iterativamente?
- * - Como puedo numerar los items en el primer *ngFor automaticamente?
+ * - Como puedo numerar los items en el *ngFor automaticamente?
  * - Como puedo crear un componente para mostrar un item, que sea reutilizable, testeable y fácil de modificar a lo largo de toda la aplicación?
  * - Como puedo agregar items al carrito?
  * - Como puedo crear un componente para mostrar el carrito?
@@ -60,9 +60,5 @@ export class AppComponent {
     }
   ];
   myCart: MyItem[] = [];
-
-  addToCart(item: MyItem) {
-    this.myCart.push(item);
-  }
 
 }
