@@ -1,0 +1,15 @@
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  padding: 10px;
+}
+
+.border-box {
+  /*border: 1px solid #303030;*/
+  max-width: 215px;
+  text-align: center;
+}
